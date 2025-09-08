@@ -118,6 +118,8 @@
                 if (type === 'we') return;
 
                 const reportName = type === 'default' ? name : `${type}-${name}`;
+                // 新增过滤条件
+                if (['能量性价比', '银行利率', '分钱速查', '帮派物资'].includes(reportName)) return;
                 reports.add(reportName);
             });
 
